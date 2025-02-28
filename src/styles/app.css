@@ -4,62 +4,66 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'SF Pro Display';
-    src: url('@/fonts/SFProDisplay-Semibold.woff2') format('woff2'),
-        url('@/fonts/SFProDisplay-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "SF Pro Display";
+  src:
+    url("@/fonts/SFProDisplay-Semibold.woff2") format("woff2"),
+    url("@/fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'SF Pro Text';
-    src: url('@/fonts/SFProText-Medium.woff2') format('woff2'),
-        url('@/fonts/SFProText-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "SF Pro Text";
+  src:
+    url("@/fonts/SFProText-Medium.woff2") format("woff2"),
+    url("@/fonts/SFProText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'SF Pro Text';
-    src: url('@/fonts/SFProText-Regular.woff2') format('woff2'),
-        url('@/fonts/SFProText-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "SF Pro Text";
+  src:
+    url("@/fonts/SFProText-Regular.woff2") format("woff2"),
+    url("@/fonts/SFProText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'SF Pro Text';
-    src: url('@/fonts/SFProText-Semibold.woff2') format('woff2'),
-        url('@/fonts/SFProText-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "SF Pro Text";
+  src:
+    url("@/fonts/SFProText-Semibold.woff2") format("woff2"),
+    url("@/fonts/SFProText-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @layer base {
-    html {
-      font-family: 'SF Pro Text';
-    }
+  html {
+    font-family: "SF Pro Text";
   }
+}
 
 /* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
-[type='text']:focus,
-[type='email']:focus,
-[type='url']:focus,
-[type='password']:focus,
-[type='number']:focus,
-[type='date']:focus,
-[type='datetime-local']:focus,
-[type='month']:focus,
-[type='search']:focus,
-[type='tel']:focus,
-[type='checkbox']:focus,
-[type='radio']:focus,
-[type='time']:focus,
-[type='week']:focus,
+[type="text"]:focus,
+[type="email"]:focus,
+[type="url"]:focus,
+[type="password"]:focus,
+[type="number"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="checkbox"]:focus,
+[type="radio"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
 [multiple]:focus,
 textarea:focus,
 select:focus {
@@ -68,24 +72,28 @@ select:focus {
 }
 
 /* Remove outline on the forms and links */
-:active, :hover, :focus {
-    outline: 0 !important;
-    outline-offset: 0 !important;
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0 !important;
 }
 
-h1, h2, h3 {
-    font-family: 'SF Pro Display';
+h1,
+h2,
+h3 {
+  font-family: "SF Pro Display";
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 600;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 button {
-    background: #b43838;
-    padding: 6px 12px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
+  background: #b43838;
+  padding: 6px 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
 }
