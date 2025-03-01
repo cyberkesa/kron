@@ -6,10 +6,10 @@
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="cursor-pointer"
+      class="cursor-pointer transition-transform transform hover:scale-110"
     >
       <path
-        class="group-hover:fill-[#CC5654]"
+        class="group-hover:fill-[#CC5654] transition-colors"
         :class="[$route.name == 'user' ? 'fill-[#CC5654]' : 'fill-[#5E5E6D]']"
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -18,7 +18,7 @@
       />
     </svg>
     <div
-      class="group-hover:block hidden w-[380px] absolute right-[-64px] pt-[25px]"
+      class="group-hover:block hidden w-[380px] absolute right-[-64px] pt-[25px] transition-opacity duration-300 z-50"
     >
       <svg
         width="38"
@@ -26,7 +26,7 @@
         viewBox="0 0 38 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="absolute top-[5px] right-[61px]"
+        class="absolute top-[5px] right-[61px] z-50"
       >
         <g clip-path="url(#clip0_470_9171)">
           <path
@@ -42,15 +42,17 @@
         </defs>
       </svg>
 
-      <div class="bg-white px-6 border border-[#E1E4ED] rounded-xl">
+      <div
+        class="bg-white px-6 border border-[#E1E4ED] rounded-xl shadow-lg z-50"
+      >
         <div v-if="authInfo.viewer == 'AnonymousViewer'" class="py-10">
-          <p class="text-center text-[15px] mb-6">
+          <p class="text-center text-[15px] mb-6 text-[#333333]">
             Войдите или зарегистрируйтесь, чтобы совершать заказы
           </p>
           <router-link
-            class="bg-[#CC5654] text-white rounded-full py-4 w-[100%] text-base font-semibold block text-center hover:opacity-90"
+            class="bg-gradient-to-r from-[#CC5654] to-[#E57373] text-white rounded-full py-4 w-[100%] text-base font-semibold block text-center hover:opacity-90 transition-opacity"
             to="/login"
-            >Войти или Зарегистрировться</router-link
+            >Войти или Зарегистрироваться</router-link
           >
         </div>
         <div v-else class="py-6">
@@ -70,11 +72,17 @@
                 fill="#111"
               />
             </svg>
-            <p class="text-lg font-semibold">{{ authInfo.userEmail }}</p>
+            <p class="text-lg font-semibold text-[#333333]">
+              {{ authInfo.userEmail }}
+            </p>
           </div>
           <div class="flex flex-col">
             <div class="flex justify-between items-center py-2">
-              <router-link to="/user">История заказов</router-link>
+              <router-link
+                to="/user"
+                class="text-[#333333] hover:text-[#CC5654] transition-colors"
+                >История заказов</router-link
+              >
               <svg
                 width="24"
                 height="24"
@@ -90,7 +98,11 @@
               </svg>
             </div>
             <div class="flex justify-between items-center py-2">
-              <router-link to="/user/addresses">Адреса</router-link>
+              <router-link
+                to="/user/addresses"
+                class="text-[#333333] hover:text-[#CC5654] transition-colors"
+                >Адреса</router-link
+              >
               <svg
                 width="24"
                 height="24"
@@ -106,7 +118,7 @@
               </svg>
             </div>
             <span
-              class="cursor-pointer text-[#CC5654] block py-2"
+              class="cursor-pointer text-[#CC5654] block py-2 hover:text-[#E57373] transition-colors"
               @click="authInfo.logOut()"
               >Выйти</span
             >
@@ -132,3 +144,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.z-50 {
+  z-index: 50;
+}
+</style>
