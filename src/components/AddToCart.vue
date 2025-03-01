@@ -3,7 +3,7 @@
     <template v-if="stockAvailabilityStatus == 'IN_STOCK'">
       <div v-if="!inCart">
         <button
-          @click="(updateCartItemQuantity(1), changeQuantity())"
+          @click="updateCartItemQuantity(1), changeQuantity()"
           class="lg:w-48 sm:w-32 h-9 rounded-full bg-[#CC5654] text-white text-sm font-semibold"
         >
           В корзину
@@ -16,7 +16,7 @@
           viewBox="0 0 36 36"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          @click="(updateCartItemQuantity(-1), changeQuantity())"
+          @click="updateCartItemQuantity(-1), changeQuantity()"
           class="select-none hover:opacity-80 cursor-pointer"
         >
           <rect
@@ -49,7 +49,7 @@
           viewBox="0 0 36 36"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          @click="(updateCartItemQuantity(1), changeQuantity())"
+          @click="updateCartItemQuantity(1), changeQuantity()"
           class="select-none hover:opacity-80 cursor-pointer"
         >
           <path

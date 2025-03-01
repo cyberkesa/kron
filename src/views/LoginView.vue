@@ -141,9 +141,9 @@ export default {
       return this.passView ? "text" : "password";
     },
   },
+  /* eslint-disable */
   methods: {
     validateEmail() {
-      //eslint-disable-next-line
       let reg =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/;
       if (!reg.test(this.email) && this.email != "") {
@@ -162,21 +162,21 @@ export default {
       this.$apollo
         .mutate({
           mutation: gql`mutation {
-              logIn(emailAddress: "${this.email}", password: "${this.password}") {
+            logIn(emailAddress: "${this.email}", password: "${this.password}") {
               __typename
-                ...on LogInSuccessResult {
-                  accessToken
-                  refreshToken
+              ...on LogInSuccessResult {
+                accessToken
+                refreshToken
                 }
-              }
-            }`,
+                }
+                }`,
         })
         .then((data) => {
           this.loading = false;
           if (data.data.logIn.__typename == "LogInSuccessResult") {
             localStorage.setItem(
               "token",
-              "Bearer " + data.data.logIn.accessToken,
+              "Bearer " + data.data.logIn.accessToken
             );
             localStorage.setItem("refresh", data.data.logIn.refreshToken);
 
@@ -210,4 +210,5 @@ export default {
     },
   },
 };
+/* eslint-enable */
 </script>

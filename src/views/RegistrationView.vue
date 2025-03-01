@@ -248,7 +248,7 @@ export default {
       }
     },
     validateEmail() {
-      //eslint-disable-next-line
+      /* eslint-disable */
       let reg =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/;
       if (!reg.test(this.email) && this.email != "") {
@@ -259,6 +259,7 @@ export default {
         this.noValidEmail = false;
       }
     },
+    /* eslint-enable */
     passViewToggle() {
       this.passView ? (this.passView = false) : (this.passView = true);
     },
@@ -370,7 +371,7 @@ export default {
           console.log("ЛОГИН! " + data.data.logIn.__typename);
           localStorage.setItem(
             "token",
-            "Bearer " + data.data.logIn.accessToken,
+            "Bearer " + data.data.logIn.accessToken
           );
           localStorage.setItem("refresh", data.data.logIn.refreshToken);
           apolloClient.resetStore().then(() => {

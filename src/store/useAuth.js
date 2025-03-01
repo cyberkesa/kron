@@ -31,7 +31,7 @@ export const useAuth = defineStore("auth", {
           console.log("Залогинились как гость, ставим локал");
           localStorage.setItem(
             "token",
-            "Bearer " + data.data.logInAsGuest.accessToken,
+            "Bearer " + data.data.logInAsGuest.accessToken
           );
           localStorage.setItem("refresh", data.data.logInAsGuest.refreshToken);
           localStorage.setItem("isLogin", 0);
@@ -68,11 +68,11 @@ export const useAuth = defineStore("auth", {
           .then((data) => {
             localStorage.setItem(
               "token",
-              "Bearer " + data.data.refreshAccessToken.accessToken,
+              "Bearer " + data.data.refreshAccessToken.accessToken
             );
             localStorage.setItem(
               "refresh",
-              data.data.refreshAccessToken.refreshToken,
+              data.data.refreshAccessToken.refreshToken
             );
             window.location.reload();
           });

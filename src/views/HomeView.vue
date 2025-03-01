@@ -1,38 +1,44 @@
 <template>
   <div class="home lg:px-0 sm:px-5">
     <div
-      class="bg-[#cc5654] rounded-xl text-white lg:text-center lg:py-14 lg:mt-10 sm:text-left sm:px-5 sm:py-8"
+      class="bg-[#CC5654] rounded-2xl text-white text-center py-16 mt-10 px-6 shadow-lg"
     >
-      <img
-        src="@/assets/big-logo.png"
-        alt=""
-        class="w-[320px] lg:mx-auto block sm:ml-0"
-      />
-      <h1 class="lg:text-[42px] font-semibold mb-2 sm:text-[32px]">
-        Интернет-магазин компании “КРОН”
-      </h1>
-      <p class="text-2xl mb-2">Заказ товаров для сада и огорода, онлайн</p>
-      <p class="text-lg">Мы работаем - вы зарабатываете!</p>
-
-      <div class="mb-6 w-[300px] lg:mx-auto mt-8 sm:ml-0">
-        <router-link
-          to="/catalog/"
-          class="bg-white rounded-full text=[15px] py-4 text-[#222] text-base font-semibold block text-center hover:opacity-90"
-          >Перейти в каталог →</router-link
-        >
+      <div class="max-w-4xl mx-auto">
+        <img
+          src="@/assets/kron_rf.png"
+          alt="КРОН.РФ - Интернет-магазин"
+          class="w-[600px] mx-auto mb-6 drop-shadow-md"
+        />
+        <h1 class="text-5xl font-bold leading-tight mb-4">
+          Интернет-магазин компании <span class="text-[#FFD700]">«КРОН»</span>
+        </h1>
+        <p class="text-2xl font-medium mb-2">
+          Лучшие товары для сада и огорода – теперь онлайн.
+        </p>
+        <p class="text-lg opacity-90">
+          Мы заботимся о вашем бизнесе, предлагая качественные товары и сервис!
+        </p>
+        <div class="mt-8">
+          <router-link
+            to="/catalog/"
+            class="inline-block bg-white text-[#222] text-lg font-semibold py-4 px-8 rounded-full shadow-md transition-transform transform hover:scale-105"
+          >
+            Перейти в каталог →
+          </router-link>
+        </div>
       </div>
     </div>
 
     <div
       class="flex lg:flex-row justify-between lg:p-10 border-2 border-[#E1E4ED] rounded-xl mt-20 sm:flex-col sm:p-5"
     >
-      <div class="lg:w-3/4 pr-10 sm:w-full lg:mb-0 sm:mb-2">
+      <div class="lg:w-3/6 pr-10 sm:w-full lg:mb-0 sm:mb-2">
         <h2 class="sm:mb-2 lg:text-[32px] sm:text-2xl lg:leading-[42px]">
-          Напишите нам и получите индивидуальное предложение на нашу продукцию
+          Свяжитесь с&nbsp;нами и&nbsp;получите персональное предложение!
         </h2>
         <p class="text-lg">
-          Чтобы получить доступ к оптовым ценам, напишите нам используя удобный
-          для вас канал связи.
+          На&nbsp;сайте указаны розничные цены. Для доступа к&nbsp;оптовым
+          условиям напишите нам удобным для вас способом.
         </p>
       </div>
       <div class="lg:w-1/4 sm:w-full">
@@ -74,7 +80,7 @@
 
         <a
           href="https://wa.me/79057324716"
-          class="bg-[#CC5654] rounded-full text=[15px] mt-6 py-2 text-[#fff] text-base font-semibold block text-center hover:opacity-90"
+          class="bg-[#32CD32] rounded-full text=[15px] mt-6 py-2 text-[#fff] text-base font-semibold block text-center hover:opacity-90"
           >Написать в WhatsApp →</a
         >
       </div>
@@ -84,25 +90,31 @@
       <div class="lg:w-1/4 sm:w-full">
         <h2 class="sm:mb-6 lg:text-[32px] sm:text-2xl">О компании</h2>
       </div>
-      <div class="lg:w-3/4 sm:w-full">
+      <div class="lg:w-3/5 sm:w-full">
         <p class="text-lg mb-4">
-          Компания Крон - это быстро развивающаяся компания, которая насчитывает
-          штат из более 50 сотрудников по всей России, имеет собственный парк
-          автомобилей, а так же собственное производство товаров народного
-          потребления в России.
+          <b>Компания &laquo;Крон&raquo;</b>&nbsp;&mdash; динамично
+          развивающийся производитель и&nbsp;прямой экспортер хозяйственных
+          товаров, а&nbsp;также товаров для сада и&nbsp;огорода.
         </p>
         <p class="text-lg mb-4">
-          Является прямым экспортером крупнейших производителей Китая, Индии,
-          Ирана, Армении, Узбекистана, Туркменистана и Вьетнама в сфере товаров
-          для сада и огорода, а так же хозяйственных товаров. Наши марки под
-          брендом “Крон”, “Крон эксперт”, “Крон эконом” зарекомендовали себя на
-          рынке как лучшее соотношение цены и качества. Мы так можем помочь вам
-          импортировать товары из выше перечисленных стран.
+          Мы&nbsp;сотрудничаем с&nbsp;крупнейшими заводами Китая, Индии, Ирана,
+          Армении, Узбекистана, Туркменистана и&nbsp;Вьетнама, обеспечивая
+          надежные поставки по&nbsp;России. Собственное производство
+          и&nbsp;автопарк позволяют контролировать качество и&nbsp;логистику.
         </p>
         <p class="text-lg mb-4">
-          Наше преимущество в том, что мы шагаем в ногу со временем и для
-          удобства наших клиентов разработали приложения и онлайн каталог, где
-          вы можете ознакомиться с ассортиментом в удобное для вас время.
+          Наши бренды <b>&laquo;Крон&raquo;</b>,
+          <b>&laquo;Крон Эксперт&raquo;</b>,
+          <b>&laquo;Крон Эконом&raquo;</b> зарекомендовали себя как оптимальное
+          сочетание цены и&nbsp;качества. Для удобства клиентов мы&nbsp;создали
+          мобильное приложение и&nbsp;онлайн-каталог, доступный в&nbsp;любое
+          время.
+        </p>
+        <p class="text-lg mb-4">
+          <b
+            >Поможем с&nbsp;импортом товаров&nbsp;&mdash; работаем напрямую
+            с&nbsp;производителями.</b
+          >
         </p>
       </div>
     </div>
@@ -122,13 +134,13 @@
           <h2
             class="sm:mb-4 lg:text-[32px] lg:leading-[42px] sm:text-[28px] sm:mt-4"
           >
-            Мобильное приложение <br />на iOS и Android
+            Мобильное приложение <br />на&nbsp;iOS и&nbsp;Android
           </h2>
           <p
             class="lg:text-[20px] lg:leading-[30px] sm:text-[18px] sm:leading-[26px]"
           >
-            Быстрое и удобное оформление заказа <br class="sm:hidden" />через
-            приложение.
+            Быстрое и&nbsp;удобное оформление заказа
+            <br class="sm:hidden" />через приложение.
           </p>
 
           <div class="flex mt-5">
