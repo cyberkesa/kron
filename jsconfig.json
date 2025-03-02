@@ -1,12 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "baseUrl": "./",
-    "moduleResolution": "node",
     "paths": {
       "@/*": ["src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
-  }
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "allowJs": true,
+    "checkJs": false,
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "useDefineForClassFields": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "exclude": ["node_modules", "dist", "build"],
+  "include": ["src/**/*"]
 }

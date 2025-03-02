@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 const plugin = require("tailwindcss/plugin");
+/* eslint-enable no-unused-vars */
 
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],

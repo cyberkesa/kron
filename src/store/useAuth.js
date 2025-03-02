@@ -110,7 +110,7 @@ export const useAuth = defineStore("auth", {
         .then((data) => {
           this.viewer = data.data.viewer.__typename;
           this.region = data.data.viewer.region;
-          if (data.data.viewer.__typename == "RegisteredViewer") {
+          if (data.data.viewer.__typename === "RegisteredViewer") {
             localStorage.setItem("isLogin", 1);
             this.userEmail = data.data.viewer.emailAddress;
             this.userPhone = data.data.viewer.phoneNumber;
@@ -132,7 +132,7 @@ export const useAuth = defineStore("auth", {
           `,
         })
         .then((data) => {
-          if (data.data.logOut.__typename == "LogOutSuccessResult") {
+          if (data.data.logOut.__typename === "LogOutSuccessResult") {
             localStorage.setItem("token", "");
             localStorage.setItem("refresh", "");
             window.location.href = "/";
