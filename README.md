@@ -10,12 +10,14 @@ Online store frontend built with Vue 3, using Apollo Client for GraphQL API inte
 - **UI Libraries:** Swiper, Vue-Slick-Carousel, Hooper
 - **Other:** Vue Meta, Vue Password, Vue Yandex Metrika
 
-## Eslint
+# Eslint@9.21.0
+### **Documentation:** https://eslint.org/docs/latest/
 
-# **Documentation:** https://eslint.org/docs/latest/
-
-# eslint command
-
+## Eslint cmds:
 - yarn eslint .
 - yarn eslint . --fix
 - yarn eslint . --cache --cache-location .eslintcache
+
+# Prettier@2.8.8
+## Prettier cmds:
+- yarn prettier --write .
