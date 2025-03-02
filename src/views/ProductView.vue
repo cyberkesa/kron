@@ -1,11 +1,11 @@
 <template>
   <div>
     <BreadcrumbsLinks
-      v-if="productBySlug.category.id"
+      v-if="productBySlug.category?.id"
       :categoryId="productBySlug.category.id"
       :productTitle="productBySlug.name"
     />
-    <div v-if="this.$apollo.queries.productBySlug.loading">Загрузка</div>
+    <div v-if="$apollo.queries.productBySlug.loading">Загрузка</div>
     <div
       v-else
       class="product-view flex lg:flex-row sm:flex-col justify-between pt-4"
@@ -58,22 +58,14 @@
 
 <script>
 /* eslint-disable */
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
 import "swiper/css";
-
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import { Navigation } from "swiper";
-
+import { Navigation, Pagination } from "swiper";
 import gql from "graphql-tag";
 import AddToCart from "@/components/AddToCart.vue";
 import BreadcrumbsLinks from "@/components/BreadcrumbsLinks.vue";
-import "vue3-carousel/dist/carousel.css";
-import { Pagination } from "swiper";
 
 export default {
   setup() {
@@ -84,8 +76,6 @@ export default {
   components: {
     AddToCart,
     BreadcrumbsLinks,
-    Navigation,
-    Pagination,
     Swiper,
     SwiperSlide,
   },
@@ -122,7 +112,15 @@ export default {
           slug: this.$route.params.productSlug,
         };
       },
+      error(error) {
+        console.error("Ошибка загрузки данных:", error);
+      },
     },
+  },
+  data() {
+    return {
+      productBySlug: {}, // Инициализируем как пустой объект
+    };
   },
   methods: {
     getTitle() {
@@ -139,11 +137,6 @@ export default {
             data.data.productBySlug.name + ' - компания ООО "КРОН"';
         });
     },
-  },
-  data() {
-    return {
-      productBySlug: false,
-    };
   },
   mounted() {
     this.getTitle();
