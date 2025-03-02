@@ -1,29 +1,11 @@
-# apollo2
+# 🚀 Vue 3 + GraphQL + Pinia
 
-## Project setup
+Online store frontend built with Vue 3, using Apollo Client for GraphQL API interaction. The project utilizes Pinia for state management, Vue Router for routing, and TailwindCSS for styling.
 
-```
-npm install
-```
+## 📌 Tech Stack
 
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- **Frontend:** Vue 3, Vue Router, Pinia
+- **API:** Apollo Client, GraphQL
+- **Styling:** TailwindCSS
+- **UI Libraries:** Swiper, Vue-Slick-Carousel, Hooper
+- **Other:** Vue Meta, Vue Password, Vue Yandex Metrika
