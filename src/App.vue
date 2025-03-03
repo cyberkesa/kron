@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import { useCart } from "@/store/useCart";
-import { useAuth } from "@/store/useAuth";
+import { useCart } from "@/store/useCart.js";
+import { useAuth } from "@/store/useAuth.js";
 import MainHeader from "@/components/header/MainHeader.vue";
 import MainFooter from "@/components/footer/MainFooter.vue";
 

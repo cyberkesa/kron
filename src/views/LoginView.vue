@@ -176,7 +176,7 @@ export default {
           if (data.data.logIn.__typename == "LogInSuccessResult") {
             localStorage.setItem(
               "token",
-              "Bearer " + data.data.logIn.accessToken
+              "Bearer " + data.data.logIn.accessToken,
             );
             localStorage.setItem("refresh", data.data.logIn.refreshToken);
 

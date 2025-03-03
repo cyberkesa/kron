@@ -1,8 +1,6 @@
-/* eslint-disable */
-
 import { createRouter, createWebHistory } from "vue-router";
-import { useAuth } from "../store/useAuth";
-import { useCart } from "../store/useCart";
+const getAuthStore = () => useAuth();
+const getCartStore = () => useCart();
 
 const routes = [
   {
@@ -94,7 +92,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory("/"),
   routes,
 });
 
@@ -114,30 +112,34 @@ router.beforeEach(async (to, from) => {
     to.name == "checkout" &&
     (from.name != "registration" || from.name != "login")
   ) {
-    useAuth().startCheckout = true;
+    getAuthStore().startCheckout = true;
     return { name: "login" };
   }
 
   if (
-    useCart().cartCount == 0 &&
-    useAuth().startCheckout != true &&
+    getCartStore().cartCount == 0 &&
+    getAuthStore().startCheckout != true &&
     to.name == "checkout" &&
     (from.name != "registration" || from.name != "login")
   ) {
     return { name: "home" };
   }
 
-  if (useAuth().startCheckout == true && to.name == "checkout" && !isLogin) {
-    useAuth().startCheckout = false;
+  if (
+    getAuthStore().startCheckout == true &&
+    to.name == "checkout" &&
+    !isLogin
+  ) {
+    getAuthStore().startCheckout = false;
   }
 
   if (
-    useAuth().startCheckout == true &&
+    getAuthStore().startCheckout == true &&
     to.name != "registration" &&
     to.name != "login" &&
     (from.name == "registration" || from.name == "login")
   ) {
-    useAuth().startCheckout = false;
+    getAuthStore().startCheckout = false;
   }
 });
 

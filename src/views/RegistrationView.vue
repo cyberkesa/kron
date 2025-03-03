@@ -371,7 +371,7 @@ export default {
           console.log("ЛОГИН! " + data.data.logIn.__typename);
           localStorage.setItem(
             "token",
-            "Bearer " + data.data.logIn.accessToken
+            "Bearer " + data.data.logIn.accessToken,
           );
           localStorage.setItem("refresh", data.data.logIn.refreshToken);
           apolloClient.resetStore().then(() => {

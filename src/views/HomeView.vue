@@ -33,7 +33,7 @@ export default {
 
         banner.style.transform = `scale(${Math.min(
           scale,
-          1.02
+          1.02,
         )}) translateY(${Math.min(translateY, 20)}px)`;
       };
 
@@ -56,7 +56,7 @@ export default {
         {
           threshold: 0.1,
           rootMargin: "0px 0px -50px 0px",
-        }
+        },
       );
 
       sections.forEach((section) => {
