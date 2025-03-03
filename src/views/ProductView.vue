@@ -57,12 +57,11 @@
 </template>
 
 <script>
-/* eslint-disable */
-import { Swiper, SwiperSlide } from "swiper/vue";
+// import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination } from "swiper";
 import gql from "graphql-tag";
 import AddToCart from "@/components/AddToCart.vue";
 import BreadcrumbsLinks from "@/components/BreadcrumbsLinks.vue";
@@ -119,7 +118,7 @@ export default {
   },
   data() {
     return {
-      productBySlug: {}, // Инициализируем как пустой объект
+      productBySlug: {},
     };
   },
   methods: {

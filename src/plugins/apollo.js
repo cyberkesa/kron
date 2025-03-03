@@ -29,7 +29,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: localStorage.getItem("token") || "",
+      authorization: globalThis.localStorage.getItem("token") || "",
     },
   };
 });

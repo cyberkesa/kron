@@ -1,19 +1,35 @@
-module.exports = {
-  root: true,
-  env: {
-    node: true,
+import js from "@eslint/js";
+import vue from "eslint-plugin-vue";
+import importPlugin from "eslint-plugin-import";
+
+export default {
+  languageOptions: {
+    sourceType: "module",
+    globals: {
+      window: "readonly",
+      document: "readonly",
+      console: "readonly",
+    },
   },
-  extends: [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "plugin:import/errors",
-    "@vue/eslint-config-prettier",
-  ],
-  parserOptions: {
-    ecmaVersion: "latest",
+
+  plugins: {
+    vue: vue,
+    import: importPlugin,
   },
+
+  settings: {
+    "import/resolver": {
+      alias: {
+        map: [["@", "src"]],
+        extensions: [".js", ".vue"],
+      },
+    },
+  },
+
   rules: {
+    ...js.configs.recommended.rules,
+    ...vue.configs["flat/recommended"].rules,
     "import/no-unresolved": "error",
-    "import/named": "error"
+    "import/named": "error",
   },
 };

@@ -176,79 +176,14 @@ About structure:
 
 ### └── yarn.lock
 
-# Packages:
-
-# {
-
-# "name": "kron",
-
-# "version": "1.0.0",
-
-# "private": true,
-
-# "scripts": {
-
-# "dev": "vite",
-
-# "build": "vite build",
-
-# "serve": "vite preview",
-
-# "lint": "eslint . --fix"
-
-# },
-
-# "dependencies": {
-
-# "@apollo/client": "^3.8.0",
-
-# "@vue/apollo-composable": "^4.0.0",
-
-# "@vueuse/head": "^1.1.25",
-
-# "axios": "^1.3.4",
-
-# "graphql": "^16.6.0",
-
-# "pinia": "^2.0.23",
-
-# "swiper": "^11.0.5",
-
-# "tailwindcss": "^3.4.1",
-
-# "v-lazy-image": "^2.1.1",
-
-# "vue": "^3.3.4",
-
-# "vue-router": "^4.2.2",
-
-# "vue3-burger-menu": "^1.1.1",
-
-# "vue3-slide-up-down": "^2.1.0"
-
-# },
-
-# "devDependencies": {
-
-# "@vitejs/plugin-vue": "^4.2.3",
-
-# "autoprefixer": "^10.4.15",
-
-# "eslint": "^8.51.0",
-
-# "eslint-plugin-vue": "^9.19.1",
-
-# "postcss": "^8.4.32",
-
-# "postcss-nesting": "^13.0.1",
-
-# "prettier": "^3.5.3",
-
-# "vite": "^4.5.0"
-
-# }
-
-# }
+<!-- # Packages: -->
 
 # cat node_modules/vue3-slide-up-down/dist/vue3-slide-up-down.js
+
 check export module
+
+yarn eslint . --format=table
+
+rm -rf node_modules yarn.lock yarn install
+
+rm -rf node_modules yarn.lock yarn cache clean --force yarn install

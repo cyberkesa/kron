@@ -29,12 +29,15 @@ export const useAuth = defineStore("auth", {
         })
         .then((data) => {
           console.log("Залогинились как гость, ставим локал");
-          localStorage.setItem(
+          globalThis.localStorage.setItem(
             "token",
             "Bearer " + data.data.logInAsGuest.accessToken,
           );
-          localStorage.setItem("refresh", data.data.logInAsGuest.refreshToken);
-          localStorage.setItem("isLogin", 0);
+          globalThis.localStorage.setItem(
+            "refresh",
+            data.data.logInAsGuest.refreshToken,
+          );
+          globalThis.localStorage.setItem("isLogin", 0);
           this.$router.push("/");
           apolloClient.resetStore().then(() => {
             console.log("RESET STORE");
@@ -51,8 +54,8 @@ export const useAuth = defineStore("auth", {
     refreshToken() {
       apolloClient.stop();
       console.log("START REFRESH");
-      let token = localStorage.getItem("refresh");
-      localStorage.setItem("token", "");
+      let token = globalThis.localStorage.getItem("refresh");
+      globalThis.localStorage.setItem("token", "");
       apolloClient.resetStore().then(() => {
         apolloClient
           .mutate({
@@ -66,11 +69,11 @@ export const useAuth = defineStore("auth", {
                   }`,
           })
           .then((data) => {
-            localStorage.setItem(
+            globalThis.localStorage.setItem(
               "token",
               "Bearer " + data.data.refreshAccessToken.accessToken,
             );
-            localStorage.setItem(
+            globalThis.localStorage.setItem(
               "refresh",
               data.data.refreshAccessToken.refreshToken,
             );
@@ -111,12 +114,12 @@ export const useAuth = defineStore("auth", {
           this.viewer = data.data.viewer.__typename;
           this.region = data.data.viewer.region;
           if (data.data.viewer.__typename === "RegisteredViewer") {
-            localStorage.setItem("isLogin", 1);
+            globalThis.localStorage.setItem("isLogin", 1);
             this.userEmail = data.data.viewer.emailAddress;
             this.userPhone = data.data.viewer.phoneNumber;
             this.isLogin = true;
           } else {
-            localStorage.setItem("isLogin", 0);
+            globalThis.localStorage.setItem("isLogin", 0);
           }
         });
     },
@@ -133,8 +136,8 @@ export const useAuth = defineStore("auth", {
         })
         .then((data) => {
           if (data.data.logOut.__typename === "LogOutSuccessResult") {
-            localStorage.setItem("token", "");
-            localStorage.setItem("refresh", "");
+            globalThis.localStorage.setItem("token", "");
+            globalThis.localStorage.setItem("refresh", "");
             window.location.href = "/";
           }
         });

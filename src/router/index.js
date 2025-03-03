@@ -1,8 +1,4 @@
-import {
-  createRouter,
-  createWebHistory,
-  createWebHashHistory,
-} from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   { path: "/", name: "home", component: () => import("@/views/HomeView.vue") },
@@ -74,7 +70,7 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from) => {
-  const isLogin = localStorage.getItem("isLogin") !== "0";
+  const isLogin = globalThis.localStorage.getItem("isLogin") !== "0";
 
   if (isLogin && (to.name === "login" || to.name === "registration")) {
     return { name: "home" };
