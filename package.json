@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.0",
-    "@vue/apollo-composable": "^4.0.0",
+    "@vue/apollo-composable": "^4.2.1",
     "@vue/apollo-option": "^4.2.0",
     "@vueuse/head": "^2.0.0",
     "axios": "^1.3.4",
