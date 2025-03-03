@@ -28,6 +28,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.15",
     "eslint": "^8.51.0",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-vue": "^9.19.1",
     "postcss": "^8.4.32",
     "postcss-nesting": "^13.0.1",
