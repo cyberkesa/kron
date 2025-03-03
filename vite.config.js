@@ -11,8 +11,13 @@ export default defineConfig({
     },
   },
   server: {
-    historyApiFallback: true,
     port: 3000,
     open: true,
+    historyApiFallback: true,
+  },
+  build: {
+    rollupOptions: {
+      external: ["@vue/apollo-option"],
+    },
   },
 });
