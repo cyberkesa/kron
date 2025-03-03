@@ -249,3 +249,6 @@ About structure:
 # }
 
 # }
+
+# cat node_modules/vue3-slide-up-down/dist/vue3-slide-up-down.js
+check export module

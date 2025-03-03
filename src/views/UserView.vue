@@ -81,7 +81,7 @@
 
 <script>
 import gql from "graphql-tag";
-import { SlideUpDown } from "vue3-slide-up-down";
+import { Vue3SlideUpDown } from "vue3-slide-up-down";
 
 export default {
   components: {
