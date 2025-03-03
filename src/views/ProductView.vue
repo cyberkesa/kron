@@ -57,11 +57,11 @@
 </template>
 
 <script>
-// import { Swiper, SwiperSlide } from "swiper/vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Swiper, { Navigation, Pagination } from "swiper";
 import gql from "graphql-tag";
 import AddToCart from "@/components/AddToCart.vue";
 import BreadcrumbsLinks from "@/components/BreadcrumbsLinks.vue";
