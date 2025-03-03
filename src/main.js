@@ -1,4 +1,4 @@
-import { createApp, markRaw } from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import { createPinia } from "pinia";
@@ -8,18 +8,12 @@ import "./styles/app.css";
 
 const pinia = createPinia();
 
-pinia.use(({ store }) => {
-  store.$router = markRaw(router);
-});
-
 const apolloProvider = createApolloProvider({
   defaultClient: apolloClient,
 });
 
 const app = createApp(App);
 
-app.config.warnHandler = function () {
-  return null;
-};
+app.config.warnHandler = () => null;
 
 app.use(pinia).use(apolloProvider).use(router).mount("#app");

@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 
 export default defineConfig({
+  base: "./",
   plugins: [vue()],
   resolve: {
     alias: {
@@ -10,6 +11,8 @@ export default defineConfig({
     },
   },
   server: {
+    historyApiFallback: true,
     port: 3000,
+    open: true,
   },
 });
