@@ -1,19 +1,10 @@
 <template>
   <div>
     <!-- Улучшенный селектор сортировки -->
-    <label for="sort" class="block text-gray-700 font-medium mb-2"
-      >Сортировать:</label
-    >
-    <select
-      v-model="sortOrder"
-      id="sort"
-      class="border rounded-md cursor-pointer px-4 py-2 text-gray-700 shadow-sm focus:ring focus:ring-red-300 transition"
-    >
-      <option value="CHEAPEST_FIRST">Сначала дешевые</option>
-      <option value="EXPENSIVE_FIRST">Сначала дорогие</option>
-      <option value="ALPHABETICALLY">По алфавиту</option>
-      <option value="NEWEST_FIRST">Новые сначала</option>
-    </select>
+    <label for="sort" class="block text-gray-700 font-medium mb-2">
+      Сортировать:
+    </label>
+    <CustomSelect v-model="sortOrder" :options="sortOptions" />
 
     <!-- Загрузка товаров -->
     <div
@@ -66,11 +57,13 @@
 <script>
 import gql from "graphql-tag";
 import ProductCard from "@/components/category/ProductCard.vue";
+import CustomSelect from "@/components/category/CustomSelect.vue";
 import { debounce } from "lodash";
 
 export default {
   components: {
     ProductCard,
+    CustomSelect,
   },
   props: {
     categoryId: {
@@ -91,6 +84,12 @@ export default {
       cursor: "",
       hasNext: false,
       loadingMore: false,
+      sortOptions: [
+        { value: "CHEAPEST_FIRST", label: "Дешевле" },
+        { value: "EXPENSIVE_FIRST", label: "Дороже" },
+        { value: "ALPHABETICALLY", label: "По алфавиту" },
+        { value: "NEWEST_FIRST", label: "Новинки" },
+      ],
     };
   },
   apollo: {
