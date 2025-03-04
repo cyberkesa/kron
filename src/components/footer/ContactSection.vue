@@ -1,18 +1,16 @@
 <template>
   <div>
-    <h3 class="mb-2">{{ title }}</h3>
-    <div class="flex flex-col lg:flex-row justify-between">
+    <h3 class="mb-2 text-lg font-bold">{{ title }}</h3>
+    <div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-12">
       <div
         v-for="(contact, index) in contacts"
         :key="index"
-        class="flex flex-col lg:m-0 sm:mt-5 sm:w-full lg:w-[25%]"
+        class="flex flex-col lg:m-0 flex-1"
       >
-        <span class="text-[15px] lg:font-normal sm:font-semibold">{{
-          contact.label
-        }}</span>
-        <div class="flex content-center items-center lg:pt-5 sm:pt-1">
+        <span class="text-sm font-medium">{{ contact.label }}</span>
+        <div class="flex items-center pt-2">
           <component :is="contact.icon" />
-          <span class="text-[15px] ml-3">{{ contact.value }}</span>
+          <span class="text-sm ml-3">{{ contact.value }}</span>
         </div>
       </div>
     </div>

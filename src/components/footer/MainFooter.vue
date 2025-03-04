@@ -1,14 +1,14 @@
 <template>
   <footer class="bg-[#F6F8FC]">
-    <div class="container mx-auto py-16">
+    <div class="container mx-auto py-16 px-6">
       <div class="flex flex-col lg:flex-row justify-between">
-        <div class="mr-28">
+        <div class="lg:mr-28 sm:mr-0 mb-6 lg:mb-0">
           <router-link to="/">
             <img src="@/assets/logo.png" alt="Логотип" />
           </router-link>
         </div>
 
-        <div class="flex flex-col w-[75%]">
+        <div class="flex flex-col max-w-4xl">
           <h2 class="sr-only">Контакты</h2>
           <ContactSection
             title="Москва"
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { defineComponent, computed } from "vue";
+import { defineComponent } from "vue";
 import ContactSection from "./ContactSection.vue";
 import PhoneIcon from "./icons/PhoneIcon.vue";
 import EmailIcon from "./icons/EmailIcon.vue";
@@ -48,7 +48,7 @@ export default defineComponent({
   setup() {
     const currentYear = new Date().getFullYear();
 
-    const moscowContacts = computed(() => [
+    const moscowContacts = [
       { icon: PhoneIcon, label: "Телефон", value: "+7(495) 799-26-66" },
       { icon: EmailIcon, label: "Почта", value: "info@tovari-kron.ru" },
       {
@@ -56,9 +56,9 @@ export default defineComponent({
         label: "Адрес",
         value: "Домодедовское шоссе, 4-й километр, 15Б",
       },
-    ]);
+    ];
 
-    const stavropolContacts = computed(() => [
+    const stavropolContacts = [
       { icon: PhoneIcon, label: "Телефон", value: "+7(903) 418-16-66" },
       { icon: EmailIcon, label: "Почта", value: "ug@tovari-kron.ru" },
       {
@@ -66,7 +66,7 @@ export default defineComponent({
         label: "Адрес",
         value: "с. Надежда, ул. Орджоникидзе 79",
       },
-    ]);
+    ];
 
     return { currentYear, moscowContacts, stavropolContacts };
   },

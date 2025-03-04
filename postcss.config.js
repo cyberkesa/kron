@@ -4,10 +4,5 @@ import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 export default {
-  plugins: [
-    postcssImport(),
-    postcssNesting(),
-    tailwindcss(),
-    autoprefixer(),
-  ],
+  plugins: [postcssImport(), postcssNesting(), tailwindcss(), autoprefixer()],
 };

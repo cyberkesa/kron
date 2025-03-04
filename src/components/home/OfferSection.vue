@@ -1,19 +1,23 @@
 <template>
   <div
-    class="flex lg:flex-row justify-between lg:p-12 border-2 border-[#E1E4ED] rounded-xl mt-20 sm:flex-col sm:p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+    class="flex lg:flex-row justify-between lg:p-12 border-2 border-[#E1E4ED] rounded-xl mt-20 flex-col p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 gap-6 lg:gap-0"
   >
-    <div class="lg:w-3/5 pr-10 sm:w-full lg:mb-0 sm:mb-8">
+    <div class="lg:w-3/5 lg:pr-10 w-full">
       <h2
-        class="sm:mb-6 lg:text-[36px] sm:text-2xl lg:leading-[48px] font-bold text-[#333333] mb-6"
+        class="text-[clamp(1.75rem,5vw,2.25rem)] font-bold text-[#333333] mb-6 text-center sm:text-left"
       >
         Получите эксклюзивные условия для оптовых заказов!
       </h2>
-      <p class="text-lg text-[#555555] mb-6 leading-relaxed">
+      <p
+        class="text-[clamp(1rem,1.2vw,1.25rem)] text-[#555555] mb-6 leading-relaxed"
+      >
         На&nbsp;сайте представлены розничные цены. Для получения специальных
         оптовых условий свяжитесь с&nbsp;нами удобным для вас способом. Мы
         предложим:
       </p>
-      <ul class="text-lg text-[#555555] mb-6 space-y-4">
+      <ul
+        class="text-[clamp(1rem,1.2vw,1.25rem)] text-[#555555] mb-6 space-y-4 sm:space-y-5"
+      >
         <li class="flex items-start">
           <svg
             width="24"
@@ -63,7 +67,9 @@
           <span>Гарантию качества от&nbsp;производителя.</span>
         </li>
       </ul>
-      <p class="text-lg text-[#555555]">
+      <p
+        class="text-[clamp(1rem,1.2vw,1.25rem)] text-[#555555] text-center sm:text-left"
+      >
         <b>Почему выбирают нас?</b> Мы&nbsp;работаем напрямую
         с&nbsp;производителями, что позволяет нам предлагать лучшие цены
         и&nbsp;гарантировать качество. Наши клиенты ценят нас
@@ -71,7 +77,7 @@
       </p>
     </div>
 
-    <div class="lg:w-1/3 sm:w-full">
+    <div class="lg:w-1/3 w-full">
       <div class="flex items-center pt-2">
         <svg
           width="24"
@@ -123,9 +129,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "OfferSection",
-};
-</script>

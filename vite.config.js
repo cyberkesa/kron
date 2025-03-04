@@ -12,7 +12,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
-      "@vue/apollo-option": path.resolve(__dirname, "node_modules/@vue/apollo-option"),
+      "@vue/apollo-option": path.resolve(
+        __dirname,
+        "node_modules/@vue/apollo-option",
+      ),
     },
   },
   server: {
@@ -22,7 +25,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-		// ?
+      // ?
     },
   },
 });

@@ -1,7 +1,11 @@
 <template>
-  <div class="section-animate flex flex-col lg:flex-row justify-between mt-20">
-    <div class="w-full lg:w-1/4">
-      <h2 class="mb-6 text-2xl lg:text-3xl font-bold text-gray-900">
+  <div
+    class="section-animate flex flex-col lg:flex-row justify-between mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-0"
+  >
+    <div class="w-full lg:w-1/4 text-center lg:text-left">
+      <h2
+        class="mb-4 sm:mb-6 text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900"
+      >
         {{ title }}
       </h2>
     </div>
@@ -9,7 +13,7 @@
       <p
         v-for="(paragraph, index) in paragraphs"
         :key="index"
-        class="text-lg text-gray-700 mb-6 leading-relaxed"
+        class="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed"
       >
         <span v-html="paragraph"></span>
       </p>
