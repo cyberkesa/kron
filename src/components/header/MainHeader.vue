@@ -1,46 +1,55 @@
 <template>
-  <div class="border-b py-6">
-    <!-- Десктопное меню -->
-    <div
-      class="hidden lg:flex justify-between items-center max-w-[1190px] w-full mx-auto px-6 gap-x-4"
+  <div class="relative">
+    <!-- Фиксированный хедер -->
+    <header
+      class="border-b py-6 fixed top-0 left-0 w-full bg-white z-50 shadow-md"
     >
-      <HeaderLogo />
-      <HeaderRegions />
-      <router-link
-        to="/catalog/"
-        class="border rounded-md-lg border-[#D50000] py-1 px-6 font-semibold hover:bg-[#D50000] hover:text-white hover:border-[#cc5654]"
+      <!-- Десктопное меню -->
+      <div
+        class="hidden lg:flex justify-between items-center max-w-[1190px] w-full mx-auto px-6 gap-x-4"
       >
-        Каталог →
-      </router-link>
-      <HeaderSearch />
-      <div class="flex items-center gap-x-4">
-        <HeaderUser />
+        <HeaderLogo />
+        <HeaderRegions />
+        <router-link
+          to="/catalog/"
+          class="border rounded-md-lg border-[#D50000] py-1 px-6 font-semibold hover:bg-[#D50000] hover:text-white hover:border-[#cc5654]"
+        >
+          Каталог →
+        </router-link>
+        <HeaderSearch />
+        <div class="flex items-center gap-x-4">
+          <HeaderUser />
+          <HeaderCart />
+        </div>
+      </div>
+
+      <!-- Мобильное меню -->
+      <div class="flex lg:hidden justify-between w-full px-5 items-center">
+        <div class="relative">
+          <Slide width="340" :closeOnNavigation="true">
+            <div class="mb-6">
+              <router-link
+                to="/catalog/"
+                class="border-[#E1E4ED] border rounded-full text-[15px] py-2 w-full text-base font-semibold block text-center hover:opacity-90"
+              >
+                Каталог продукции →
+              </router-link>
+            </div>
+            <span class="font-semibold">Регион</span>
+            <HeaderRegions class="ml-0 mr-[20px] mb-5" />
+            <MobileUser />
+          </Slide>
+        </div>
+        <HeaderLogo />
         <HeaderCart />
       </div>
-    </div>
+    </header>
 
-    <!-- Мобильное меню -->
-    <div class="flex lg:hidden justify-between w-full px-5 items-center">
-      <div class="relative">
-        <Slide width="340" :closeOnNavigation="true">
-          <div class="mb-6">
-            <router-link
-              to="/catalog/"
-              class="border-[#E1E4ED] border rounded-full text-[15px] py-2 w-full text-base font-semibold block text-center hover:opacity-90"
-            >
-              Каталог продукции →
-            </router-link>
-          </div>
-          <span class="font-semibold">Регион</span>
-          <HeaderRegions class="ml-0 mr-[20px] mb-5" />
-          <MobileUser />
-        </Slide>
-      </div>
-      <HeaderLogo />
-      <HeaderCart />
-    </div>
+    <!-- Контент с отступом -->
+    <main class="pt-[80px]">
+      <slot />
+    </main>
   </div>
-  <hr />
 </template>
 
 <script>
