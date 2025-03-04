@@ -1,6 +1,6 @@
 <template>
   <div
-    class="section-animate bg-gradient-to-r from-[#CC5654] to-[#E57373] rounded-xl min-h-[370px] lg:pr-14 lg:flex-row lg:mt-[130px] sm:mt-20 text-white flex relative flex-col items-center sm:items-start px-6 sm:pt-6 sm:pb-10"
+    class="section-animate bg-gradient-to-r from-[#D50000] to-[#B50909] rounded-md-lg min-h-[370px] lg:pr-14 lg:flex-row lg:mt-[130px] sm:mt-20 text-white flex relative flex-col items-center sm:items-start px-6 sm:pt-6 sm:pb-10"
   >
     <img
       src="@/assets/phone.png"

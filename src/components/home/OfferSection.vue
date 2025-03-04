@@ -25,7 +25,7 @@
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="flex-shrink-0 mr-3 text-[#CC5654]"
+            class="flex-shrink-0 mr-3 text-[#b50909]"
           >
             <path
               d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"
@@ -41,7 +41,7 @@
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="flex-shrink-0 mr-3 text-[#CC5654]"
+            class="flex-shrink-0 mr-3 text-[#b50909]"
           >
             <path
               d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"
@@ -57,7 +57,7 @@
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="flex-shrink-0 mr-3 text-[#CC5654]"
+            class="flex-shrink-0 mr-3 text-[#b50909]"
           >
             <path
               d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"
@@ -93,7 +93,7 @@
           />
         </svg>
         <span
-          class="text-[16px] ml-3 text-[#444984] hover:text-[#CC5654] transition-colors duration-200"
+          class="text-[16px] ml-3 text-[#444984] hover:text-[#b50909] transition-colors duration-200"
         >
           info@tovari-kron.ru
         </span>
@@ -114,7 +114,7 @@
           />
         </svg>
         <span
-          class="text-[16px] ml-3 text-[#444984] hover:text-[#CC5654] transition-colors duration-200"
+          class="text-[16px] ml-3 text-[#444984] hover:text-[#b50909] transition-colors duration-200"
         >
           +7 (495) 799-26-66
         </span>

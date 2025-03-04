@@ -50,6 +50,7 @@ export default {
         30: "7.5rem",
       },
       borderRadius: {
+        "md-lg": "10px",
         xl: "1rem",
         "2xl": "1.5rem",
         "3xl": "2rem",

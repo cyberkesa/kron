@@ -8,7 +8,7 @@
       <HeaderRegions />
       <router-link
         to="/catalog/"
-        class="border rounded-full border-[#E1E4ED] py-1 px-6 font-semibold hover:bg-[#cc5654] hover:text-white hover:border-[#cc5654]"
+        class="border rounded-md-lg border-[#D50000] py-1 px-6 font-semibold hover:bg-[#D50000] hover:text-white hover:border-[#cc5654]"
       >
         Каталог →
       </router-link>

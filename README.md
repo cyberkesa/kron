@@ -187,3 +187,5 @@ yarn eslint . --format=table
 rm -rf node_modules yarn.lock yarn install
 
 rm -rf node_modules yarn.lock yarn cache clean --force yarn install
+
+grep -r "category-view" src/

@@ -1,12 +1,12 @@
 <template>
   <div
-    class="banner-animate bg-gradient-to-r from-[#CC5654] to-[#E57373] rounded-2xl text-white text-center py-8 sm:py-12 mt-6 sm:mt-8 px-4 sm:px-6 md:px-12 shadow-lg"
+    class="banner-animate bg-gradient-to-r from-[#D50000] to-[#B50909] rounded-md-lg text-white text-center py-8 sm:py-12 mt-6 sm:mt-8 px-4 sm:px-6 md:px-12 shadow-lg"
   >
     <div class="max-w-4xl mx-auto">
       <img
         src="@/assets/kron_rf.png"
         alt="КРОН.РФ - Интернет-магазин товаров для сада и огорода"
-        class="w-[80%] sm:w-[500px] mx-auto mb-4 sm:mb-6 drop-shadow-md transition-transform transform hover:scale-105 max-w-full"
+        class="w-[80%] sm:w-[660px] mx-auto mb-4 sm:mb-6 drop-shadow-md transition-transform transform hover:scale-105 max-w-full"
         loading="lazy"
       />
       <h1
@@ -27,7 +27,7 @@
       <div class="mt-4 sm:mt-6">
         <router-link
           to="/catalog/"
-          class="inline-block bg-white text-[#222] text-[clamp(0.875rem,2.5vw,1rem)] font-semibold py-2 px-5 sm:px-6 rounded-full shadow-md hover-scale"
+          class="inline-block bg-white text-[#222] text-[clamp(0.875rem,2.5vw,1rem)] font-semibold py-2 px-5 sm:px-6 rounded-md-lg shadow-md hover-scale"
         >
           Перейти в&nbsp;каталог &rarr;
         </router-link>

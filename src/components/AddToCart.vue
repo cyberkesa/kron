@@ -4,7 +4,7 @@
       <div v-if="!inCart">
         <button
           @click="(updateCartItemQuantity(1), changeQuantity())"
-          class="lg:w-48 sm:w-32 h-9 rounded-full bg-[#CC5654] text-white text-sm font-semibold"
+          class="lg:w-48 sm:w-32 h-9 rounded-md-lg bg-[#D50000] text-white text-sm font-semibold"
         >
           В корзину
         </button>

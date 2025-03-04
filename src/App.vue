@@ -3,7 +3,7 @@
   <div v-else class="wrap flex flex-col h-screen justify-between">
     <MainHeader />
     <router-view
-      class="xl:w-[1190px] sm:w-[100%] lg:w-[960px] mx-auto pb-32 lg:px-0 sm:px-5"
+      class="xl:w-[1320px] sm:w-full lg:w-[1140px] mx-auto pb-32 lg:px-5 sm:px-6"
     />
     <MainFooter class="mt-auto lg:px-0 sm:px-5" />
   </div>

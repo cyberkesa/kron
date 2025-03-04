@@ -8,7 +8,9 @@
       {{ categoryBySlug.title }}
     </h1>
 
-    <div class="sm:flex-col flex lg:flex-row justify-between">
+    <div
+      class="sm:flex-col flex lg:flex-row justify-between mx-auto lg:mx-4 sm:mx-2"
+    >
       <div class="sm:w-full lg:w-1/4">
         <router-link
           to="/catalog/"
